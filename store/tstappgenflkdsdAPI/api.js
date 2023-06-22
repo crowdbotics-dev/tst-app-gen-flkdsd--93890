@@ -26,6 +26,24 @@ function api_v1_hello_partial_update(payload) {
 function api_v1_hello_destroy(payload) {
   return tstappgenflkdsdAPI.delete(`/api/v1/hello/${payload.id}/`)
 }
+function api_v1_hi_list(payload) {
+  return tstappgenflkdsdAPI.get(`/api/v1/hi/`)
+}
+function api_v1_hi_create(payload) {
+  return tstappgenflkdsdAPI.post(`/api/v1/hi/`, payload.data)
+}
+function api_v1_hi_retrieve(payload) {
+  return tstappgenflkdsdAPI.get(`/api/v1/hi/${payload.id}/`)
+}
+function api_v1_hi_update(payload) {
+  return tstappgenflkdsdAPI.put(`/api/v1/hi/${payload.id}/`, payload.data)
+}
+function api_v1_hi_partial_update(payload) {
+  return tstappgenflkdsdAPI.patch(`/api/v1/hi/${payload.id}/`, payload.data)
+}
+function api_v1_hi_destroy(payload) {
+  return tstappgenflkdsdAPI.delete(`/api/v1/hi/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return tstappgenflkdsdAPI.post(`/api/v1/login/`, payload.data)
 }
@@ -79,6 +97,12 @@ export const apiService = {
   api_v1_hello_update,
   api_v1_hello_partial_update,
   api_v1_hello_destroy,
+  api_v1_hi_list,
+  api_v1_hi_create,
+  api_v1_hi_retrieve,
+  api_v1_hi_update,
+  api_v1_hi_partial_update,
+  api_v1_hi_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
